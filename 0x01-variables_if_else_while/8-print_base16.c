@@ -10,9 +10,9 @@
 
 int main(void)
 {
-	int n = 48;
+	int i = 48;
 
-	while (n <= 102)
+	while (i <= 102)
 	{
 		putchar(i);
 
@@ -20,6 +20,6 @@ int main(void)
 			i += 39;
 		i++;
 	}
-	putchar('\n')
+	putchar('\n';)
 
 	return (0);
