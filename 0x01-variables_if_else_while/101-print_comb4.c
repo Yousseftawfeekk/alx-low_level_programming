@@ -20,7 +20,7 @@ int main(void)
 		{
 			while (n3 < 10)
 			{
-				if (n1 != n2 && n1 < n2&&
+				if (n1 != n2 && n1 < n2 &&
 				    n2 != n3 && n2 < n3)
 				{
 					putchar(n1 + 48);
