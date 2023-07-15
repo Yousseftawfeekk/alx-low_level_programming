@@ -37,24 +37,3 @@ int main(void)
 
 	return (0);
 }
-
-
-
-
-
-
-
-		putchar(n + 48);
-
-		if (n != 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-
-		n++;
-	}
-	putchar('\n');
-
-	return (0);
-}
