@@ -11,11 +11,11 @@
 
 int main(void)
 {
-	int n1 = 0;
-	int n2 = 0;
+	int n1 = 0, n2;
 
 	while (n1 < 10)
 	{
+		n2 = 0;
 		while (n2 < 10)
 		{
 			if (n1 != n2 && n1 < n2)
