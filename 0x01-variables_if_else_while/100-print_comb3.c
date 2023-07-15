@@ -11,19 +11,19 @@
 
 int main(void)
 {
-	int n1 = 0, n2;
+	int n1 = 48, n2;
 
-	while (n1 < 10)
+	while (n1 <= 56)
 	{
-		n2 = 0;
-		while (n2 < 10)
+		n2 = 49;
+		while (n2 <= 57)
 		{
-			if (n1 != n2 && n1 < n2)
+			if (n1 < n2)
 			{
 				putchar(n1 + 48);
 				putchar(n2 + 48);
 
-				if (n1 + n2 != 17)
+				if (n1 != 56 || n2 != 57)
 				{
 					putchar(',');
 					putchar(' ');
