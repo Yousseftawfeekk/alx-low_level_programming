@@ -33,7 +33,7 @@ int main(void)
 						putchar(' ');
 					}
 				}
-				n3++
+				n3++;
 			}
 			n2++;
 		}
