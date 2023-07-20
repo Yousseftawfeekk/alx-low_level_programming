@@ -5,7 +5,7 @@
  *
  * @c: digits 0-9
  *
- * return 1 if it's digit, 0 if not
+ * Return: 1 if it's digit, 0 if not
 */
 
 int _isdigit(int c)
