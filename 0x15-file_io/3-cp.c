@@ -39,7 +39,7 @@ void close_file(int fd)
 
 	if (cl == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Cannot close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -59,7 +59,7 @@ void close_file(int fd)
 
 int main(int argc, char *argv[])
 {
-	int from, to, read;
+	int from, to, readd;
 	short bytes;
 	char *buffer;
 
@@ -71,11 +71,11 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	read = read(from, buffer, 1024);
+	readd = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (from == -1 || read == -1)
+		if (from == -1 || readd == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
@@ -83,19 +83,19 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		bytes = write(to, buffer, read);
+		bytes = write(to, buffer, readd);
 		if (to == -1 || bytes == -1)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: cannot write to %s\n", argv[2]);
+				"Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
 
-		read = read(from, buffer, 1024);
+		readd = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
-	} while (read > 0);
+	} while (readd > 0);
 
 	free(buffer);
 	close_file(from);
